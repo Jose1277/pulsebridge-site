@@ -6,10 +6,6 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center">
-            {/*Logo absolute top left*/}
-            <div className="absolute top-6 left-6 z-10">
-                <Image src="/logo.png" alt="PulseBridge Logo" width={300} height={80} />
-            </div>
 
             {/* Background Image */}
             <Image
