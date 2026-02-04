@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 import { MessageCircle, ClipboardList, CheckCircle, Play, Send } from "lucide-react";
 
 const steps = [
-    { title: "Contact", description: "Initial conversation via WhatsApp", icon: MessageCircle },
-    { title: "Apply", description: "Complete pre-screening form", icon: ClipboardList },
-    { title: "Review", description: "We assess your eligibility", icon: CheckCircle },
-    { title: "Prepare", description: "Resume & interview guidance", icon: Play },
-    { title: "Connect", description: "Referral to partner companies", icon: Send },
+    { title: "Contact", description: "Initial conversation via WhatsApp", icon: MessageCircle, color: "turquesa" },
+    { title: "Apply", description: "Complete pre-screening form", icon: ClipboardList, color: "blue" },
+    { title: "Review", description: "We assess your eligibility", icon: CheckCircle, color: "blue" },
+    { title: "Prepare", description: "Resume & interview guidance", icon: Play, color: "navy" },
+    { title: "Connect", description: "Referral to partner companies", icon: Send, color: "navy" },
 ];
 
 export default function HowItWorks() {
@@ -20,6 +20,12 @@ export default function HowItWorks() {
         target: containerRef,
         offset: ["start start", "end end"],
     });
+
+    const colorClasses = {
+        turquesa: { active: "border-turquesa text-turquesa", inactive: "border-neutral-100 text-neutral-100" },
+        blue: { active: "border-blue text-blue", inactive: "border-neutral-100 text-neutral-100" },
+        navy: { active: "border-navy text-navy", inactive: "border-neutral-100 text-neutral-100" },
+    };
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         setProgress(latest);
@@ -35,7 +41,7 @@ export default function HowItWorks() {
 
                     <div className="relative">
                         {/* BG line */}
-                        <div className="absolute left-6.5 top-7 bottom-7 w-1 bg-turquesa/20" />
+                        <div className="absolute left-6.5 top-7 bottom-7 w-1 bg-neutral-100" />
 
                         {/* Color line */}
                         <motion.div
@@ -51,14 +57,15 @@ export default function HowItWorks() {
                                 const stepProgress = Math.max(0, Math.min(1, (progress - index * 0.2) / 0.15));
                                 const isActive = stepProgress > 0;
                                 const Icon = step.icon;
+                                const colors = colorClasses[step.color as keyof typeof colorClasses];
 
                                 return (
                                     <div key={index} className="flex gap-6 pb-8 last:pb-0">
                                         <div
-                                            className={`relative z-10 w-14 h-14 rounded-full border-2 border-turquesa flex items-center justify-center transition-colors duration-300 ${isActive ? "bg-turquesa" : "bg-white"
+                                            className={`relative z-10 w-14 h-14 rounded-full border-3 bg-white flex items-center justify-center transition-colors duration-300 ${isActive ? colors.active : colors.inactive
                                                 }`}
                                         >
-                                            <Icon size={24} className={isActive ? "text-white" : "text-turquesa"} />
+                                            <Icon size={28} />
                                         </div>
 
                                         <div className={`pt-3 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-30"}`}>

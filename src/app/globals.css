@@ -4,7 +4,7 @@
   --background: #F8FBFC;
   --foreground: #0F2C4A;
 
-  /* Cores PulseBridge */
+  /* Colors PulseBridge */
   --turquesa: #4ECDC4;
   --blue: #2E86AB;
   --navy: #1A4D7A;
@@ -12,6 +12,7 @@
   --neutral-50: #F8FBFC;
   --neutral-100: #E8F4F6;
   --neutral-600: #64748B;
+  --gradient-hero: linear-gradient(135deg, #4ECDC4 0%, #2E86AB 50%, #1A4D7A 100%);
 }
 
 @theme inline {
