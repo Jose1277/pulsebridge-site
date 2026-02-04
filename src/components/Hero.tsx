@@ -12,9 +12,16 @@ export default function Hero() {
             </div>
 
             {/* Background Image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: "url('/nurse-hero.jpg')" }}
+            <Image
+                src="/nurse-hero.jpg"
+                alt="Hero background"
+                fill
+                className="object-cover object-center"
+                priority
+                quality={75}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBQYSIRMxQWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhA//aAAwDAQACEQMRAD8AzKz3Nqltptvaz3PljhQI/EKMkDGTgd/alKVRKoB4mMux5Jn/2Q=="
+                sizes="100vw"
             />
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-turquesa via-blue to-navy opacity-75" />

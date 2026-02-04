@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const achievements = [
     "200+ nurses supported",
@@ -29,9 +30,11 @@ export default function About() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image */}
                     <motion.div style={{ opacity: opacityLeft, x: xLeft }}>
-                        <img
+                        <Image
                             src="/josilene.jpg"
                             alt="Josilene Duarte"
+                            width={448}
+                            height={448}
                             className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                         />
                     </motion.div>
