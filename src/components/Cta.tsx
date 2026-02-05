@@ -19,11 +19,11 @@ export default function Cta() {
                 style={{ scale, opacity }}
                 className="max-w-5xl mx-auto px-4 text-center"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                <h2 className="text-3xl md:text-6xl font-bold text-white mb-6">
                     Ready to start your journey?
                 </h2>
 
-                <p className="text-lg text-white-100 mb-10">
+                <p className="md:text-lg text-base text-white-100 mb-10">
                     Complete our pre-screening application and take the first step toward your future in the United States
                 </p>
 

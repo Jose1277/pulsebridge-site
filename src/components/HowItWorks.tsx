@@ -33,7 +33,7 @@ export default function HowItWorks() {
 
     return (
         <section ref={containerRef} className="h-[300vh] relative">
-            <div className="sticky top-0 h-screen flex items-center justify-center bg-white py-16 md:py-0">
+            <div className="sticky top-0 md:h-screen h-[100svh] flex items-center justify-center bg-white py-16 md:py-0">
                 <div className="max-w-2xl mx-auto px-4">
                     <h2 className="text-4xl md:text-5xl font-bold text-navy text-center mb-10 md:mb-16">
                         How It Works

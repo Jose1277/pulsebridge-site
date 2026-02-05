@@ -40,7 +40,7 @@ export default function Testimonials() {
 
     return (
         <section ref={containerRef} className="h-[200vh] relative">
-            <div className="sticky top-0 h-screen flex items-center justify-center bg-neutral-100">
+            <div className="sticky  top-0 md:h-screen h-[100svh] flex items-center justify-center bg-neutral-100">
                 <div className="max-w-4xl mx-auto px-4 w-full">
                     <h2 className="text-4xl md:text-5xl font-bold text-navy text-center mb-16">
                         What Nurses Say
